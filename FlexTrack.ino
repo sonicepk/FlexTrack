@@ -20,14 +20,14 @@
 // Edit this section to choose the hardware design and set your payload ID etc
 
 // CHOOSE BOARD (comment out one of these only)
-#define HABDUINO
+// #define HABDUINO
 // #define UAVANUT_LORA
 // #define HS_APRS_300
-// #define HS_RTTY_300      
+#define HS_RTTY_300      
 
 // RTTY settings
-#define RTTY_PAYLOAD_ID   "CHANGE_ME"          // Do not use spaces.
-#define RTTY_FREQUENCY    434.65               // For devices that are frequency-agile
+#define RTTY_PAYLOAD_ID   "SONICEPK"          // Do not use spaces.
+//#define RTTY_FREQUENCY    434.65               // For devices that are frequency-agile
 #define RTTY_BAUD          50               // Comment out if not using RTTY
 #define RTTY_SHIFT        425                // Only used on boards where PWM is used for RTTY.
 
@@ -62,8 +62,10 @@
 #define LORA_CALL_MODE		 5				
 #define LORA_CALL_COUNT		 10				// Set to zero to disable calling mode
 
+#define SDCARD              1
+
 // APRS settings
-#define APRS_CALLSIGN    "CHANGE"               // Max 6 characters
+/*#define APRS_CALLSIGN    "CHANGE"               // Max 6 characters
 #define APRS_SSID            11
 #define APRS_PATH_ALTITUDE   1500              // Below this altitude, ** in metres **, path will switch to WIDE1-1, WIDE2-1.  Above it will be or path or WIDE2-1 (see below)
 #define APRS_HIGH_USE_WIDE2    1                 // 1 means WIDE2-1 is used at altitude; 0 means no path is used
@@ -75,7 +77,7 @@
                                                // Set to 0 to disable
 #define APRS_COMMENT     "www.daveakerman.com"   
 #define APRS_TELEM_INTERVAL  2                // How often to send telemetry packets.  Comment out to disable
-
+*/
 // Cutdown settings
 // #define CUTDOWN             A2
 
@@ -107,7 +109,7 @@
   #define RTTY_ENABLE         6
   #define RTTY_DATA           3 
   #define A0_MULTIPLIER      4.9
-  #define WIREBUS             5
+  #define WIREBUS             35
 #endif
 
 #ifdef UAVANUT_LORA
@@ -296,6 +298,10 @@ void setup()
   
 #ifdef WIREBUS
   Setupds18b20();
+#endif
+ 
+#ifdef SDCARD
+  SetupSD();
 #endif
 }
 
