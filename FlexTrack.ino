@@ -31,6 +31,8 @@
 #define RTTY_BAUD          50               // Comment out if not using RTTY
 #define RTTY_SHIFT        425                // Only used on boards where PWM is used for RTTY.
 
+#define GSMMODEM          1               //Endable GSM Modem
+
 // Power settings
 #define POWERSAVING	                      // Comment out to disable GPS power saving
 
@@ -61,8 +63,6 @@
 #define LORA_CALL_FREQ 		433.650
 #define LORA_CALL_MODE		 5				
 #define LORA_CALL_COUNT		 10				// Set to zero to disable calling mode
-
-#define SDCARD              1
 
 // APRS settings
 /*#define APRS_CALLSIGN    "CHANGE"               // Max 6 characters
@@ -244,7 +244,7 @@ void setup()
       Serial.print(' ');
       Serial.print(APRS_CALLSIGN);
     #endif  
-      
+    
     Serial.println("");
     Serial.println("");
   #endif
@@ -300,8 +300,9 @@ void setup()
   Setupds18b20();
 #endif
  
-#ifdef SDCARD
-  SetupSD();
+
+#ifdef GSMMODEM
+  GSMsetup();
 #endif
 }
 
@@ -334,6 +335,11 @@ void loop()
 
 #ifdef WIREBUS
   Checkds18b20();
+#endif
+
+#ifdef GSMMODEM
+// Read SMS queue
+    readTC35();
 #endif
 }
 

@@ -14,6 +14,10 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
+#include <SPI.h>
+#include <SD.h>
+
+
 #define MAX_SENSORS  4
 // Variables
 
@@ -36,10 +40,23 @@ void Setupds18b20(void)
   {
     sensors.setResolution(9);
   }
+
+  Serial.print("Initializing SD card...");
+  if (!SD.begin(10)) {
+  Serial.println("initialization failed!");
+  }
+  Serial.println("initialization done.");
 }
+
+
 
 void Checkds18b20(void)
 {
+   char SDLatitudeString[16], SDLongitudeString[16];
+        dtostrf(GPS.Latitude, 7, 5, SDLatitudeString);
+        dtostrf(GPS.Longitude, 7, 5, SDLongitudeString);
+        
+  File myFile;
   if (millis() >= CheckDS18B20s)
   {
     if (GettingTemperature)
@@ -50,6 +67,33 @@ void Checkds18b20(void)
       {
         DS18B20_Temperatures[i] = sensors.getTempCByIndex(i);
         Serial.print("Temperature "); Serial.print(i); Serial.print(" = "); Serial.print(DS18B20_Temperatures[i]); Serial.println("degC");
+        myFile = SD.open("temp.txt", FILE_WRITE);
+        // if the file opened okay, write to it:
+        if (myFile) {
+        Serial.print("Writing to temp.txt..."); 
+        //myFile.print(GPS.Hours, GPS.Minutes, GPS.Seconds);
+        char Mydata[120];
+
+        snprintf(Mydata,
+            SENTENCE_LENGTH-6,
+            "$$%s,%d,%02d:%02d:%02d,%s,%s,%05.5ld,%02d",
+            RTTY_PAYLOAD_ID,
+            SentenceCounter,
+      GPS.Hours, GPS.Minutes, GPS.Seconds,
+            SDLatitudeString,
+            SDLongitudeString,
+            GPS.Altitude,
+            DS18B20_Temperatures[i]
+            );
+            Serial.print("Mydata:"); 
+            Serial.println(Mydata); 
+            myFile.println(Mydata);
+        }
+        else {
+        Serial.println("Cannot find file ");   
+          }
+        // close the file:
+      myFile.close();      
       }
       CheckDS18B20s = millis() + 10000L;
     }
