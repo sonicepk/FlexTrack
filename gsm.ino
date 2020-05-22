@@ -9,6 +9,7 @@
   // on the TC35 to start it up
 
 unsigned long CheckGSMs=0;
+unsigned long CheckSMSs=0;
 
 void GSMsetup(){
   pinMode(GSMGROUND, INPUT);
@@ -17,23 +18,23 @@ void GSMsetup(){
   delay(100);
   pinMode(GSMGROUND, INPUT);
   delay(100);
-  
+
   // Setup GSM
   Serial2.begin(GSMBAUD);
   Serial.println("Call setup modem.");
   setupModem();
   delete_All_SMS();
   Serial.println("GSM Ready.");
-}  
+}
 
 
 void setupModem() {
-  
+
 // AT+CMGF=1          for txt mode
 // AT+CNMI=2,1,0,0,1  message indication
 // AT^SMGO=1          SMS full indication
 // AT&W               store to memory
-  //while (!Serial){;}  
+  //while (!Serial){;}
   //Set the Prefered Message Storage Parameter
   Serial2.println("AT+CMGF=1");
   delay(modemDelay);
@@ -93,7 +94,7 @@ CheckGSMs = millis() + 10000L;
 }  // end of readTC35
 
 
-//Process the SMS messages from the SIM card. 
+//Process the SMS messages from the SIM card.
 void process_data (char * data) {
 int SMS_location_number;
 
@@ -107,10 +108,10 @@ int SMS_location_number;
     Serial2.print("AT+CMGR=");
     Serial2.println(SMS_location_number);  // Query modem for the Data from the appropriate SMS text number ie text number 1 to whatever
     Serial.println("message received ie data =");
-    Serial.println(data); 
+    Serial.println(data);
   }
-  
-  if(strstr(data, "wru")) { //Where are you? 
+
+  if(strstr(data, "wru")) { //Where are you?
     Serial.println("Ringing, sending.");
     SendTextMessage();
    }
@@ -124,22 +125,43 @@ int SMS_location_number;
    }
 }
 
-void SendTextMessage(){ 
+void SendTextMessage(){
 String reply;
-//reply = readGPS();
 reply = "Test with dummy";
+char SMSLatitudeString[16], SMSLongitudeString[16];
+dtostrf(GPS.Latitude, 7, 5, SMSLatitudeString);
+dtostrf(GPS.Longitude, 7, 5, SMSLongitudeString);
+char Mysms[120];
+snprintf(Mysms,
+        SENTENCE_LENGTH-6,
+        "%02d:%02d:%02d,%s,%s,%05.5ld,%02d",
+        GPS.Hours, GPS.Minutes, GPS.Seconds,
+        SMSLatitudeString,
+        SMSLongitudeString,
+        GPS.Altitude,
+        );
 Serial.print("reply =");
 Serial.println (reply);
-Serial2.print("AT+CMGF=1\r"); 
-delay(1000);  
-Serial2.print("AT+CMGS=\"+353879255000\"\r");  
-delay(1000);  
-Serial2.println(reply);  
-Serial2.print("\r");  
-delay(1000);  
-Serial2.println((char)26);  
-Serial2.println();  
-}  
+if (millis() >= CheckSMSs)
+{
+  Serial2.print("AT+CMGF=1\r");
+  if (millis() >= CheckSMSs + 1000)
+    {
+    Serial2.print("AT+CMGS=\"+353879255000\"\r");
+    if (millis() >= CheckSMSs + 2000)
+      {
+      Serial2.println(reply);
+      Serial2.print("\r");
+        if (millis() >= CheckSMSs + 3000)
+        {
+        Serial2.println((char)26);
+        Serial2.println();
+        }
+      }
+    }
+}
+CheckSMSs = 0; //reset the delay to zero. Using to avoid using blocking delay function
+}//end of routine
 
 void delete_All_SMS() {
   for(int i = 1; i <= 5; i++) {

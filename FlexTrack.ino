@@ -34,7 +34,7 @@
 #define GSMMODEM          1               //Endable GSM Modem
 
 // Power settings
-#define POWERSAVING	                      // Comment out to disable GPS power saving
+//#define POWERSAVING	                      // Comment out to disable GPS power saving
 
 // LORA settings
 #define LORA_PAYLOAD_ID   "CHANGE_ME"            // Do not use spaces.

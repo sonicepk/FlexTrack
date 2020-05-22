@@ -1,0 +1,340 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+A0_MULTIPLIER	FlexTrack.ino	100;"	d	file:
+A0_MULTIPLIER	FlexTrack.ino	111;"	d	file:
+A0_MULTIPLIER	FlexTrack.ino	123;"	d	file:
+A0_MULTIPLIER	FlexTrack.ino	134;"	d	file:
+APRSSentenceCounter	aprs.ino	/^unsigned int APRSSentenceCounter;$/;"	v
+APRS_DATA	FlexTrack.ino	133;"	d	file:
+APRS_DATA	FlexTrack.ino	142;"	d	file:
+APRS_DATA	FlexTrack.ino	98;"	d	file:
+APRS_DEVID	aprs.ino	36;"	d	file:
+APRS_ENABLE	FlexTrack.ino	132;"	d	file:
+APRS_ENABLE	FlexTrack.ino	141;"	d	file:
+APRS_ENABLE	FlexTrack.ino	97;"	d	file:
+APRS_EQNS1	aprs.ino	204;"	d	file:
+APRS_EQNS2	aprs.ino	209;"	d	file:
+APRS_EQNS3	aprs.ino	214;"	d	file:
+APRS_EQNS4	aprs.ino	216;"	d	file:
+APRS_PARM1	aprs.ino	202;"	d	file:
+APRS_PARM2	aprs.ino	207;"	d	file:
+APRS_PARM3	aprs.ino	212;"	d	file:
+APRS_UNIT1	aprs.ino	203;"	d	file:
+APRS_UNIT2	aprs.ino	208;"	d	file:
+APRS_UNIT3	aprs.ino	213;"	d	file:
+AddBytesToFSKBuffer	lora.ino	/^void AddBytesToFSKBuffer(int MaxBytes)$/;"	f
+AirCount	lora.ino	/^int AirCount;$/;"	v
+Altitude	FlexTrack.ino	/^	int32_t  	Altitude;$/;"	m	struct:TBinaryPacket	file:
+Altitude	FlexTrack.ino	/^  long Altitude;$/;"	m	struct:TGPS	file:
+BANDWIDTH_10K4	lora.ino	76;"	d	file:
+BANDWIDTH_125K	lora.ino	82;"	d	file:
+BANDWIDTH_15K6	lora.ino	77;"	d	file:
+BANDWIDTH_20K8	lora.ino	78;"	d	file:
+BANDWIDTH_250K	lora.ino	83;"	d	file:
+BANDWIDTH_31K25	lora.ino	79;"	d	file:
+BANDWIDTH_41K7	lora.ino	80;"	d	file:
+BANDWIDTH_500K	lora.ino	84;"	d	file:
+BANDWIDTH_62K5	lora.ino	81;"	d	file:
+BANDWIDTH_7K8	lora.ino	75;"	d	file:
+BAUD_RATE	aprs.ino	25;"	d	file:
+BadCRCCount	lora.ino	/^int BadCRCCount;$/;"	v
+BatteryVoltage	FlexTrack.ino	/^  float BatteryVoltage;$/;"	m	struct:TGPS	file:
+BiSeconds	FlexTrack.ino	/^	uint16_t	BiSeconds;$/;"	m	struct:TBinaryPacket	file:
+BoardCurrent	FlexTrack.ino	/^  unsigned int BoardCurrent;$/;"	m	struct:TGPS	file:
+BuildLoRaCall	misc.ino	/^int BuildLoRaCall(unsigned char *TxLine)$/;"	f
+BuildLoRaPositionPacket	lora.ino	/^int BuildLoRaPositionPacket(unsigned char *TxLine)$/;"	f
+BuildSentence	misc.ino	/^int BuildSentence(char *TxLine, const char *PayloadID)$/;"	f
+CRC_OFF	lora.ino	96;"	d	file:
+CRC_ON	lora.ino	97;"	d	file:
+CallingCount	lora.ino	/^int CallingCount=0;$/;"	v
+Channel0Average	adc.ino	/^  unsigned int Channel0Average;$/;"	v
+Channel0Readings	adc.ino	/^  unsigned int Channel0Readings[5];$/;"	v
+CheckADC	adc.ino	/^void CheckADC(void)$/;"	f
+CheckADCChannels	adc.ino	/^unsigned long CheckADCChannels=0;$/;"	v
+CheckAPRS	aprs.ino	/^void CheckAPRS(void)$/;"	f
+CheckCutdown	cutdown.ino	/^void CheckCutdown(void)$/;"	f
+CheckDS18B20s	ds18b20.ino	/^unsigned long CheckDS18B20s=0;$/;"	v
+CheckFSKBuffer	lora.ino	/^void CheckFSKBuffer(void)$/;"	f
+CheckGPS	gps.ino	/^void CheckGPS(void)$/;"	f
+CheckGSMs	gsm.ino	/^unsigned long CheckGSMs=0;$/;"	v
+CheckLEDs	led.ino	/^void CheckLEDs(void)$/;"	f
+CheckLoRa	lora.ino	/^void CheckLoRa(void)$/;"	f
+CheckLoRaRx	lora.ino	/^void CheckLoRaRx(void)$/;"	f
+CheckRTTY	rtty.ino	/^void CheckRTTY(void)$/;"	f
+Checkds18b20	ds18b20.ino	/^void Checkds18b20(void)$/;"	f
+ControlLEDs	led.ino	/^void ControlLEDs(int LEDStatus, int LEDOK, int LEDWarn)$/;"	f
+Counter	FlexTrack.ino	/^	uint16_t	Counter;$/;"	m	struct:TBinaryPacket	file:
+CutdownNow	cutdown.ino	/^void CutdownNow(void)$/;"	f
+CutdownStatus	FlexTrack.ino	/^  int CutdownStatus;$/;"	m	struct:TGPS	file:
+DEBUG_SERIAL	FlexTrack.ino	144;"	d	file:
+DEBUG_SERIAL	FlexTrack.ino	157;"	d	file:
+DS18B20_Temperatures	ds18b20.ino	/^int DS18B20_Temperatures[MAX_SENSORS];$/;"	v
+DataBits	rtty.ino	/^int StopBits, DataBits;$/;"	v
+Direction	FlexTrack.ino	/^  int Direction;$/;"	m	struct:TGPS	file:
+DisableNMEAProtocol	gps.ino	/^void DisableNMEAProtocol(unsigned char Protocol)$/;"	f
+ERROR_CODING_4_5	lora.ino	70;"	d	file:
+ERROR_CODING_4_6	lora.ino	71;"	d	file:
+ERROR_CODING_4_7	lora.ino	72;"	d	file:
+ERROR_CODING_4_8	lora.ino	73;"	d	file:
+EXPLICIT_MODE	lora.ino	67;"	d	file:
+EXTRA_FIELD_FORMAT	FlexTrack.ino	160;"	d	file:
+EXTRA_FIELD_LIST	FlexTrack.ino	161;"	d	file:
+ExternalTemperature	FlexTrack.ino	/^  float ExternalTemperature;$/;"	m	struct:TGPS	file:
+FSKBitRate	lora.ino	/^int FSKBitRate, FSKOverSample, RTTYBitLength;$/;"	v
+FSKBufferLow	lora.ino	/^int FSKBufferLow(void)$/;"	f
+FSKOverSample	lora.ino	/^int FSKBitRate, FSKOverSample, RTTYBitLength;$/;"	v
+FSKPacketSent	lora.ino	/^int FSKPacketSent(void)$/;"	f
+FixType	FlexTrack.ino	/^  byte FixType;$/;"	m	struct:TGPS	file:
+FixUBXChecksum	gps.ino	/^void FixUBXChecksum(unsigned char *Message, int Length)$/;"	f
+FlightMode	FlexTrack.ino	/^  byte FlightMode;$/;"	m	struct:TGPS	file:
+GPS	FlexTrack.ino	/^} GPS;$/;"	v	typeref:struct:TGPS
+GPSAvailable	gps.ino	/^int GPSAvailable(void)$/;"	f
+GPS_I2C	FlexTrack.ino	106;"	d	file:
+GPS_I2C	FlexTrack.ino	116;"	d	file:
+GPS_I2C	FlexTrack.ino	94;"	d	file:
+GPS_ON	FlexTrack.ino	129;"	d	file:
+GPS_SERIAL	FlexTrack.ino	143;"	d	file:
+GPS_SERIAL	FlexTrack.ino	152;"	d	file:
+GSMBAUD	gsm.ino	3;"	d	file:
+GSMGROUND	gsm.ino	1;"	d	file:
+GSMMODEM	FlexTrack.ino	34;"	d	file:
+GSMsetup	gsm.ino	/^void GSMsetup(){$/;"	f
+GettingTemperature	ds18b20.ino	/^int GettingTemperature=0;$/;"	v
+GlonassMode	gps.ino	/^byte GlonassMode=0;$/;"	v
+GroundCount	lora.ino	/^int GroundCount;$/;"	v
+HS_RTTY_300	FlexTrack.ino	26;"	d	file:
+HaveHadALock	gps.ino	/^byte HaveHadALock=0;$/;"	v
+Hex	gps.ino	/^char Hex(char Character)$/;"	f
+Hours	FlexTrack.ino	/^  int Hours, Minutes, Seconds;$/;"	m	struct:TGPS	file:
+IMPLICIT_MODE	lora.ino	68;"	d	file:
+ISR	aprs.ino	/^ISR(TIMER2_OVF_vect)$/;"	f
+ISR	rtty.ino	/^ISR(TIMER1_COMPA_vect)$/;"	f
+ImplicitOrExplicit	lora.ino	/^int ImplicitOrExplicit;$/;"	v
+InRTTYMode	lora.ino	/^int InRTTYMode=0;$/;"	v
+InternalTemperature	FlexTrack.ino	/^  float InternalTemperature;$/;"	m	struct:TGPS	file:
+LED_OK	FlexTrack.ino	122;"	d	file:
+LED_OK	FlexTrack.ino	128;"	d	file:
+LED_OK	FlexTrack.ino	140;"	d	file:
+LED_STATUS	FlexTrack.ino	107;"	d	file:
+LED_STATUS	FlexTrack.ino	95;"	d	file:
+LED_TX	FlexTrack.ino	108;"	d	file:
+LED_TX	FlexTrack.ino	96;"	d	file:
+LED_WARN	FlexTrack.ino	121;"	d	file:
+LED_WARN	FlexTrack.ino	127;"	d	file:
+LNA_MAX_GAIN	lora.ino	115;"	d	file:
+LNA_OFF_GAIN	lora.ino	116;"	d	file:
+LORA_BINARY	FlexTrack.ino	62;"	d	file:
+LORA_CALL_COUNT	FlexTrack.ino	65;"	d	file:
+LORA_CALL_FREQ	FlexTrack.ino	63;"	d	file:
+LORA_CALL_MODE	FlexTrack.ino	64;"	d	file:
+LORA_CYCLETIME	FlexTrack.ino	60;"	d	file:
+LORA_DIO0	FlexTrack.ino	119;"	d	file:
+LORA_DIO5	FlexTrack.ino	120;"	d	file:
+LORA_FREQUENCY	FlexTrack.ino	56;"	d	file:
+LORA_ID	FlexTrack.ino	59;"	d	file:
+LORA_MODE	FlexTrack.ino	61;"	d	file:
+LORA_NSS	FlexTrack.ino	117;"	d	file:
+LORA_OFFSET	FlexTrack.ino	57;"	d	file:
+LORA_PACKET_TIME	FlexTrack.ino	55;"	d	file:
+LORA_PAYLOAD_ID	FlexTrack.ino	40;"	d	file:
+LORA_REPEAT_SLOT_1	FlexTrack.ino	42;"	d	file:
+LORA_REPEAT_SLOT_2	FlexTrack.ino	43;"	d	file:
+LORA_RESET	FlexTrack.ino	118;"	d	file:
+LORA_RTTY_BAUD	FlexTrack.ino	46;"	d	file:
+LORA_RTTY_COUNT	FlexTrack.ino	48;"	d	file:
+LORA_RTTY_EVERY	FlexTrack.ino	49;"	d	file:
+LORA_RTTY_FREQ	FlexTrack.ino	45;"	d	file:
+LORA_RTTY_PREAMBLE	FlexTrack.ino	50;"	d	file:
+LORA_RTTY_SHIFT	FlexTrack.ino	47;"	d	file:
+LORA_SLOT	FlexTrack.ino	41;"	d	file:
+LORA_TIME_INDEX	FlexTrack.ino	52;"	d	file:
+LORA_TIME_MUTLIPLER	FlexTrack.ino	53;"	d	file:
+LORA_TIME_OFFSET	FlexTrack.ino	54;"	d	file:
+LastCommand1	gps.ino	/^byte LastCommand1=0;$/;"	v
+LastCommand2	gps.ino	/^byte LastCommand2=0;$/;"	v
+LastLoRaTX	lora.ino	/^unsigned long LastLoRaTX=0;$/;"	v
+Latitude	FlexTrack.ino	/^	float		Latitude;$/;"	m	struct:TBinaryPacket	file:
+Latitude	FlexTrack.ino	/^  float Longitude, Latitude;$/;"	m	struct:TGPS	file:
+LoRaIsFree	lora.ino	/^int LoRaIsFree(void)$/;"	f
+LoRaMode	lora.ino	/^tLoRaMode LoRaMode;$/;"	v
+Longitude	FlexTrack.ino	/^	float		Longitude;$/;"	m	struct:TBinaryPacket	file:
+Longitude	FlexTrack.ino	/^  float Longitude, Latitude;$/;"	m	struct:TGPS	file:
+MAX_SENSORS	ds18b20.ino	21;"	d	file:
+MTX2	FlexTrack.ino	136;"	d	file:
+Minutes	FlexTrack.ino	/^  int Hours, Minutes, Seconds;$/;"	m	struct:TGPS	file:
+NextAPRS	aprs.ino	/^unsigned long NextAPRS=0;$/;"	v
+NextLEDs	led.ino	/^unsigned long NextLEDs=0;$/;"	v
+PAYLOAD_LENGTH	lora.ino	64;"	d	file:
+PA_DAC_20	lora.ino	111;"	d	file:
+PA_LOW_BOOST	lora.ino	103;"	d	file:
+PA_MAX_BOOST	lora.ino	102;"	d	file:
+PA_MAX_UK	lora.ino	105;"	d	file:
+PA_MED_BOOST	lora.ino	104;"	d	file:
+PA_OFF_BOOST	lora.ino	106;"	d	file:
+PHASE_DELTA_1200	aprs.ino	32;"	d	file:
+PHASE_DELTA_2200	aprs.ino	33;"	d	file:
+PHASE_DELTA_XOR	aprs.ino	34;"	d	file:
+PLAYBACK_RATE	aprs.ino	30;"	d	file:
+POWERSAVING	FlexTrack.ino	37;"	d	file:
+PREAMBLE_BYTES	aprs.ino	27;"	d	file:
+PacketToRepeat	lora.ino	/^struct TBinaryPacket PacketToRepeat;$/;"	v	typeref:struct:TBinaryPacket
+PayloadIDs	FlexTrack.ino	/^	uint8_t 	PayloadIDs;$/;"	m	struct:TBinaryPacket	file:
+PollGPSPosition	gps.ino	/^void PollGPSPosition(void)$/;"	f
+PollGPSTime	gps.ino	/^void PollGPSTime(void)$/;"	f
+PowerMode	FlexTrack.ino	/^  byte PowerMode;$/;"	m	struct:TGPS	file:
+Pressure	FlexTrack.ino	/^  float Pressure;$/;"	m	struct:TGPS	file:
+ProcessNMEA	gps.ino	/^void ProcessNMEA(unsigned char *Buffer, int Count)$/;"	f
+ProcessUBX	gps.ino	/^void ProcessUBX(unsigned char *Buffer, int Length)$/;"	f
+ProcessUBX_ACK	gps.ino	/^void ProcessUBX_ACK(unsigned char *Buffer, int Length)$/;"	f
+ProcessUBX_NAV_PVT	gps.ino	/^void ProcessUBX_NAV_PVT(unsigned char *Buffer, int Length)$/;"	f
+REG_BITRATE_LSB	lora.ino	55;"	d	file:
+REG_BITRATE_MSB	lora.ino	54;"	d	file:
+REG_DETECTION_THRESHOLD	lora.ino	39;"	d	file:
+REG_DETECT_OPT	lora.ino	38;"	d	file:
+REG_DIO_MAPPING_1	lora.ino	40;"	d	file:
+REG_DIO_MAPPING_2	lora.ino	41;"	d	file:
+REG_FDEV_LSB	lora.ino	50;"	d	file:
+REG_FDEV_MSB	lora.ino	49;"	d	file:
+REG_FIFO	lora.ino	21;"	d	file:
+REG_FIFO_ADDR_PTR	lora.ino	23;"	d	file:
+REG_FIFO_RX_BASE_AD	lora.ino	25;"	d	file:
+REG_FIFO_RX_CURRENT_ADDR	lora.ino	26;"	d	file:
+REG_FIFO_THRESH	lora.ino	48;"	d	file:
+REG_FIFO_TX_BASE_AD	lora.ino	24;"	d	file:
+REG_FREQ_ERROR	lora.ino	37;"	d	file:
+REG_FRF_LSB	lora.ino	53;"	d	file:
+REG_FRF_MID	lora.ino	52;"	d	file:
+REG_FRF_MSB	lora.ino	51;"	d	file:
+REG_HOP_PERIOD	lora.ino	36;"	d	file:
+REG_IRQ_FLAGS	lora.ino	28;"	d	file:
+REG_IRQ_FLAGS2	lora.ino	56;"	d	file:
+REG_IRQ_FLAGS_MASK	lora.ino	27;"	d	file:
+REG_LNA	lora.ino	114;"	d	file:
+REG_MODEM_CONFIG	lora.ino	30;"	d	file:
+REG_MODEM_CONFIG2	lora.ino	31;"	d	file:
+REG_MODEM_CONFIG3	lora.ino	32;"	d	file:
+REG_OPMODE	lora.ino	22;"	d	file:
+REG_PACKET_CONFIG1	lora.ino	46;"	d	file:
+REG_PAYLOAD_LENGTH	lora.ino	35;"	d	file:
+REG_PAYLOAD_LENGTH_FSK	lora.ino	47;"	d	file:
+REG_PA_CONFIG	lora.ino	101;"	d	file:
+REG_PA_DAC	lora.ino	110;"	d	file:
+REG_PREAMBLE_LSB	lora.ino	34;"	d	file:
+REG_PREAMBLE_LSB_FSK	lora.ino	45;"	d	file:
+REG_PREAMBLE_MSB	lora.ino	33;"	d	file:
+REG_PREAMBLE_MSB_FSK	lora.ino	44;"	d	file:
+REG_RX_NB_BYTES	lora.ino	29;"	d	file:
+REST_BYTES	aprs.ino	28;"	d	file:
+RF98_MODE_RX_CONTINUOUS	lora.ino	59;"	d	file:
+RF98_MODE_SLEEP	lora.ino	61;"	d	file:
+RF98_MODE_STANDBY	lora.ino	62;"	d	file:
+RF98_MODE_TX	lora.ino	60;"	d	file:
+RFO_MIN	lora.ino	107;"	d	file:
+RTTYBitLength	lora.ino	/^int FSKBitRate, FSKOverSample, RTTYBitLength;$/;"	v
+RTTYCount	lora.ino	/^int RTTYCount=0;$/;"	v
+RTTYIndex	lora.ino	/^int RTTYIndex, RTTYMask, RTTYLength;$/;"	v
+RTTYLength	lora.ino	/^int RTTYIndex, RTTYMask, RTTYLength;$/;"	v
+RTTYMask	lora.ino	/^int RTTYIndex, RTTYMask, RTTYLength;$/;"	v
+RTTY_BAUD	FlexTrack.ino	31;"	d	file:
+RTTY_Counter	rtty.ino	/^int RTTY_Counter;$/;"	v
+RTTY_DATA	FlexTrack.ino	110;"	d	file:
+RTTY_DATA	FlexTrack.ino	131;"	d	file:
+RTTY_ENABLE	FlexTrack.ino	109;"	d	file:
+RTTY_ENABLE	FlexTrack.ino	130;"	d	file:
+RTTY_PAYLOAD_ID	FlexTrack.ino	29;"	d	file:
+RTTY_SHIFT	FlexTrack.ino	32;"	d	file:
+ReadADC	adc.ino	/^unsigned int ReadADC(int Pin, float Multiplier, unsigned int *Readings)$/;"	f
+ReadGPS	gps.ino	/^char ReadGPS(void)$/;"	f
+RepeatedPacketType	lora.ino	/^byte SendRepeatedPacket, RepeatedPacketType=0;$/;"	v
+RequiredFlightMode	gps.ino	/^byte RequiredFlightMode=0;$/;"	v
+RequiredPowerMode	gps.ino	/^byte RequiredPowerMode=-1;$/;"	v
+SAMPLES_PER_BAUD	aprs.ino	31;"	d	file:
+SENTENCE_LENGTH	FlexTrack.ino	166;"	d	file:
+SPREADING_10	lora.ino	92;"	d	file:
+SPREADING_11	lora.ino	93;"	d	file:
+SPREADING_12	lora.ino	94;"	d	file:
+SPREADING_6	lora.ino	88;"	d	file:
+SPREADING_7	lora.ino	89;"	d	file:
+SPREADING_8	lora.ino	90;"	d	file:
+SPREADING_9	lora.ino	91;"	d	file:
+Satellites	FlexTrack.ino	/^  unsigned int Satellites;$/;"	m	struct:TGPS	file:
+Seconds	FlexTrack.ino	/^  int Hours, Minutes, Seconds;$/;"	m	struct:TGPS	file:
+SecondsInDay	FlexTrack.ino	/^  unsigned long SecondsInDay;					\/\/ Time in seconds since midnight$/;"	m	struct:TGPS	file:
+SendBit	rtty.ino	/^volatile int SendBit = 0;$/;"	v
+SendIndex	rtty.ino	/^volatile int SendIndex = -1;$/;"	v
+SendLoRaPacket	lora.ino	/^void SendLoRaPacket(unsigned char *buffer, int Length)$/;"	f
+SendLoRaRTTY	lora.ino	/^void SendLoRaRTTY(int Length)$/;"	f
+SendRepeatedPacket	lora.ino	/^byte SendRepeatedPacket, RepeatedPacketType=0;$/;"	v
+SendTextMessage	gsm.ino	/^void SendTextMessage(){ $/;"	f
+SendUBX	gps.ino	/^void SendUBX(unsigned char *Message, int Length)$/;"	f
+SendingRTTY	lora.ino	/^int SendingRTTY=0;$/;"	v
+SensorCount	ds18b20.ino	/^int SensorCount=0;       \/\/ Number of temperature devices found$/;"	v
+Sentence	lora.ino	/^unsigned char Sentence[SENTENCE_LENGTH];$/;"	v
+SentenceCounter	FlexTrack.ino	/^int SentenceCounter=0;$/;"	v
+SetFlightMode	gps.ino	/^void SetFlightMode(byte NewMode)$/;"	f
+SetGNSSMode	gps.ino	/^void SetGNSSMode(void)$/;"	f
+SetMTX2Frequency	rtty.ino	/^void SetMTX2Frequency(float Frequency)$/;"	f
+SetPowerMode	gps.ino	/^void SetPowerMode(byte SavePower)$/;"	f
+SettingFrequency	rtty.ino	/^int SettingFrequency;$/;"	v
+SetupADC	adc.ino	/^void SetupADC(void)$/;"	f
+SetupAPRS	aprs.ino	/^void SetupAPRS(void)$/;"	f
+SetupCutdown	cutdown.ino	/^void SetupCutdown(void)$/;"	f
+SetupGPS	gps.ino	/^void SetupGPS(void)$/;"	f
+SetupLEDs	led.ino	/^void SetupLEDs(void)$/;"	f
+SetupLoRa	lora.ino	/^void SetupLoRa(void)$/;"	f
+SetupRTTY	rtty.ino	/^void SetupRTTY(void)$/;"	f
+SetupTimer1	rtty.ino	/^void SetupTimer1(int Baud) $/;"	f
+Setupds18b20	ds18b20.ino	/^void Setupds18b20(void)$/;"	f
+Speed	FlexTrack.ino	/^  int Speed;$/;"	m	struct:TGPS	file:
+StopBits	rtty.ino	/^int StopBits, DataBits;$/;"	v
+SwitchToFSKMode	lora.ino	/^void SwitchToFSKMode(void)$/;"	f
+TABLE_SIZE	aprs.ino	26;"	d	file:
+TBinaryPacket	FlexTrack.ino	/^struct TBinaryPacket$/;"	s	file:
+TGPS	FlexTrack.ino	/^struct TGPS$/;"	s	file:
+TargetID	lora.ino	/^int TargetID;$/;"	v
+TimeToSend	lora.ino	/^int TimeToSend(void)$/;"	f
+TimeToSendIfNoGPS	lora.ino	/^unsigned long TimeToSendIfNoGPS=0;$/;"	v
+Timer2Count	rtty.ino	/^int Timer2Count;$/;"	v
+TxLine	rtty.ino	/^char TxLine[SENTENCE_LENGTH];$/;"	v
+WIREBUS	FlexTrack.ino	102;"	d	file:
+WIREBUS	FlexTrack.ino	112;"	d	file:
+WIREBUS	FlexTrack.ino	135;"	d	file:
+_ax25_callsign	aprs.ino	/^static uint8_t *_ax25_callsign(uint8_t *s, const char *callsign, const char ssid)$/;"	f	file:
+_sine_table	aprs.ino	/^static const uint8_t PROGMEM _sine_table[] = {$/;"	v	file:
+_txbuf	aprs.ino	/^volatile static uint8_t *_txbuf = 0;$/;"	v	file:
+_txlen	aprs.ino	/^volatile static uint8_t  _txlen = 0;$/;"	v	file:
+aprs_mode	aprs.ino	/^int aprs_mode=0;$/;"	v
+ax25_base91enc	aprs.ino	/^char *ax25_base91enc(char *s, uint8_t n, uint32_t v)$/;"	f
+ax25_frame	aprs.ino	/^void ax25_frame(const char *scallsign, const char sssid, const char *dcallsign, const char dssid, const char ttl1, const char ttl2, const char *data, ...)$/;"	f
+currentMode	lora.ino	/^byte currentMode = 0x81;$/;"	v
+delete_All_SMS	gsm.ino	/^void delete_All_SMS() {$/;"	f
+errorstatus	FlexTrack.ino	/^  unsigned int errorstatus;$/;"	m	struct:TGPS	file:
+freeRam	FlexTrack.ino	/^int freeRam(void)$/;"	f
+lmIdle	lora.ino	/^typedef enum {lmIdle, lmListening, lmSending} tLoRaMode;$/;"	e	enum:__anon1	file:
+lmListening	lora.ino	/^typedef enum {lmIdle, lmListening, lmSending} tLoRaMode;$/;"	e	enum:__anon1	file:
+lmSending	lora.ino	/^typedef enum {lmIdle, lmListening, lmSending} tLoRaMode;$/;"	e	enum:__anon1	file:
+loop	FlexTrack.ino	/^void loop()$/;"	f
+modemDelay	gsm.ino	2;"	d	file:
+oneWire	ds18b20.ino	/^DallasTemperature sensors(&oneWire);   \/\/ Pass oneWire reference to Dallas Temperature object$/;"	v
+process_data	gsm.ino	/^void process_data (char * data) {$/;"	f
+psm_status	FlexTrack.ino	/^  byte psm_status;$/;"	m	struct:TGPS	file:
+readRegister	lora.ino	/^byte readRegister(byte addr)$/;"	f
+readTC35	gsm.ino	/^void readTC35() {$/;"	f
+receiveMessage	lora.ino	/^int receiveMessage(unsigned char *message, int MaxLength)$/;"	f
+rtty_txbit	rtty.ino	/^void rtty_txbit(int bit)$/;"	f
+select	lora.ino	/^void select() $/;"	f
+setFrequency	lora.ino	/^void setFrequency(double Frequency)$/;"	f
+setLoRaMode	lora.ino	/^void setLoRaMode()$/;"	f
+setMode	lora.ino	/^void setMode(byte newMode)$/;"	f
+setup	FlexTrack.ino	/^void setup()$/;"	f
+setupModem	gsm.ino	/^void setupModem() {$/;"	f
+setupRFM98	lora.ino	/^void setupRFM98(double Frequency, int Mode)$/;"	f
+startReceiving	lora.ino	/^void startReceiving(void)$/;"	f
+tLoRaMode	lora.ino	/^typedef enum {lmIdle, lmListening, lmSending} tLoRaMode;$/;"	t	typeref:enum:__anon1	file:
+tx_aprs	aprs.ino	/^void tx_aprs(void)$/;"	f
+unselect	lora.ino	/^void unselect() $/;"	f
+writeRegister	lora.ino	/^void writeRegister(byte addr, byte value)$/;"	f

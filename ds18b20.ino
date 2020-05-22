@@ -45,7 +45,7 @@ void Setupds18b20(void)
   if (!SD.begin(10)) {
   Serial.println("initialization failed!");
   }
-  Serial.println("initialization done.");
+  Serial.println("SD card initialization done.");
 }
 
 
