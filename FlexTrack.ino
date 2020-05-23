@@ -31,7 +31,7 @@
 #define RTTY_BAUD          50               // Comment out if not using RTTY
 #define RTTY_SHIFT        425                // Only used on boards where PWM is used for RTTY.
 
-#define GSMMODEM          1               //Endable GSM Modem
+#define GSMMODEM          1               //Enable GSM Modem
 
 // Power settings
 //#define POWERSAVING	                      // Comment out to disable GPS power saving

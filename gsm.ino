@@ -56,12 +56,13 @@ const unsigned int MAX_INPUT = 165; // 160 characters for SMS plus a few extra
 static unsigned int input_pos = 0;
 
   static char input_line [MAX_INPUT];
-
-  if (Serial2.available() > 0) {
+  //Serial.println("Before Serial2 check in readTC35");
+ // CheckGSMs = millis() + 10000L; //Don't check the Serial2 buffer again for 10 seconds
+  if (Serial2.available() > 0) { //Check to see if a message has arrived. Serial buffer holds 64 Bytes
     Serial.println("Serial2 available");
     while (Serial2.available () > 0) {
       char inByte = Serial2.read();
-
+            
       switch (inByte) {
 
       case '\n':   // end of text
@@ -89,7 +90,6 @@ static unsigned int input_pos = 0;
   }  // end of if incoming data
 
 }//end of timer
-CheckGSMs = millis() + 10000L;
 
 }  // end of readTC35
 
@@ -125,7 +125,7 @@ int SMS_location_number;
    }
 }
 
-void SendTextMessage(){
+void TESTSendTextMessage(){
 String reply;
 reply = "Test with dummy";
 char SMSLatitudeString[16], SMSLongitudeString[16];
@@ -134,33 +134,39 @@ dtostrf(GPS.Longitude, 7, 5, SMSLongitudeString);
 char Mysms[120];
 snprintf(Mysms,
         SENTENCE_LENGTH-6,
-        "%02d:%02d:%02d,%s,%s,%05.5ld,%02d",
+        "%02d:%02d:%02d,%s,%s,%05.5ld",
         GPS.Hours, GPS.Minutes, GPS.Seconds,
         SMSLatitudeString,
         SMSLongitudeString,
-        GPS.Altitude,
+        GPS.Altitude
         );
 Serial.print("reply =");
 Serial.println (reply);
 if (millis() >= CheckSMSs)
 {
   Serial2.print("AT+CMGF=1\r");
-  if (millis() >= CheckSMSs + 1000)
+  Serial.println("Setup send command AT+CMGF=1\r");
+  if (millis() >= CheckSMSs + 500)
     {
     Serial2.print("AT+CMGS=\"+353879255000\"\r");
-    if (millis() >= CheckSMSs + 2000)
+    Serial.println("Send phone number to modem");
+    if (millis() >= CheckSMSs + 1000)
       {
-      Serial2.println(reply);
+      Serial2.println(Mysms);
       Serial2.print("\r");
-        if (millis() >= CheckSMSs + 3000)
+      Serial.println("reply to sms:");
+      Serial.println(Mysms);
+        if (millis() >= CheckSMSs + 1500)
         {
-        Serial2.println((char)26);
-        Serial2.println();
+          Serial.println("Final SMS timer:");
+          Serial2.println((char)26);
+          Serial2.println();
+          CheckSMSs = millis(); //reset the delay to zero. Using to avoid using blocking delay function
         }
       }
     }
 }
-CheckSMSs = 0; //reset the delay to zero. Using to avoid using blocking delay function
+
 }//end of routine
 
 void delete_All_SMS() {
@@ -172,3 +178,32 @@ void delete_All_SMS() {
     delay(500);
   }
 }
+
+void SendTextMessage(){ 
+String reply;
+//reply = "Some simple string";
+Serial.print("reply =");
+char SMSLatitudeString[16], SMSLongitudeString[16];
+dtostrf(GPS.Latitude, 7, 5, SMSLatitudeString);
+dtostrf(GPS.Longitude, 7, 5, SMSLongitudeString);
+char Mysms[120];
+snprintf(Mysms,
+        SENTENCE_LENGTH-6,
+        "%02d:%02d:%02d,%s,%s,%05.5ld",
+        GPS.Hours, GPS.Minutes, GPS.Seconds,
+        SMSLatitudeString,
+        SMSLongitudeString,
+        GPS.Altitude
+        );
+
+Serial.println (Mysms);
+Serial2.print("AT+CMGF=1\r"); 
+delay(1000);  
+Serial2.print("AT+CMGS=\"+353879255000\"\r");  
+delay(1000);  
+Serial2.println(Mysms);  
+Serial2.print("\r");  
+delay(1000);  
+Serial2.println((char)26);  
+Serial2.println();  
+}  
