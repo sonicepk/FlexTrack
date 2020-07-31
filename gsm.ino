@@ -1,4 +1,4 @@
-#define GSMGROUND 33 //reset the TC35 by shorting the push button
+#define GSMGROUND 7 //reset the TC35 by shorting the push button
 #define modemDelay 500 //in ms
 #define GSMBAUD 9600  // TC35 Baud
 

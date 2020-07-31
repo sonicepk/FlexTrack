@@ -26,7 +26,7 @@
 #define HS_RTTY_300      
 
 // RTTY settings
-#define RTTY_PAYLOAD_ID   "SONICEPK"          // Do not use spaces.
+#define RTTY_PAYLOAD_ID   "SONICEPK1"          // Do not use spaces.
 //#define RTTY_FREQUENCY    434.65               // For devices that are frequency-agile
 #define RTTY_BAUD          50               // Comment out if not using RTTY
 #define RTTY_SHIFT        425                // Only used on boards where PWM is used for RTTY.
@@ -107,7 +107,7 @@
   #define LED_STATUS         A2
   #define LED_TX             A3
   #define RTTY_ENABLE         6
-  #define RTTY_DATA           3 
+  #define RTTY_DATA           43 
   #define A0_MULTIPLIER      4.9
   #define WIREBUS             35
 #endif
