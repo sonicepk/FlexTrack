@@ -91,7 +91,8 @@ void CheckRTTY(void)
 {
   if (SendIndex == -1)
   {
-    BuildSentence(TxLine, RTTY_PAYLOAD_ID);    
+    BuildSentence(TxLine, RTTY_PAYLOAD_ID);  
+    Serial.println("Build sentence TxLine = ");  
     Serial.print(TxLine);
     Serial.print('\r');
     SendIndex = 0;

@@ -12,14 +12,14 @@ int BuildSentence(char *TxLine, const char *PayloadID)
 
     snprintf(TxLine,
             SENTENCE_LENGTH-6,
-            "$$%s,%d,%02d:%02d:%02d,%s,%s,%05.5ld" EXTRA_FIELD_FORMAT,
+            "$$%s,%d,%02d:%02d:%02d,%s,%s,%05.5ld",// EXTRA_FIELD_FORMAT,
             PayloadID,
             SentenceCounter,
 	    GPS.Hours, GPS.Minutes, GPS.Seconds,
             LatitudeString,
             LongitudeString,
             GPS.Altitude
-            EXTRA_FIELD_LIST 
+           // EXTRA_FIELD_LIST 
             );
             
     /*
@@ -59,7 +59,7 @@ int BuildSentence(char *TxLine, const char *PayloadID)
     TxLine[Count++] = Hex(CRC & 15);
   	TxLine[Count++] = '\n';  
 	  TxLine[Count++] = '\0';
-	
+   
 	return strlen(TxLine) + 1;
 }
 

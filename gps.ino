@@ -131,6 +131,8 @@ void ProcessUBX_ACK(unsigned char *Buffer, int Length)
   if ((LastCommand1 == 0x06) && (LastCommand2 == 0x24))
   {
     GPS.FlightMode = RequiredFlightMode;
+    Serial.print("set flightmode = ");
+    Serial.println(RequiredFlightMode);
   }
   else if ((LastCommand1 == 0x06) && (LastCommand2 == 0x3E))
   {
@@ -418,7 +420,10 @@ void CheckGPS(void)
         if (RequiredFlightMode != GPS.FlightMode)
         {
           SetFlightMode(RequiredFlightMode);
-          // Serial.println("Setting flight mode\n");
+          Serial.print("Setting flight mode Altitude: ");
+          Serial.println(GPS.Altitude);
+          Serial.print("Flight mode: ");
+          Serial.println(RequiredFlightMode);
         }
       break;
       
