@@ -26,7 +26,7 @@
 #define HS_RTTY_300      
 
 // RTTY settings
-#define RTTY_PAYLOAD_ID   "SONICEPK1"          // Do not use spaces.
+#define RTTY_PAYLOAD_ID   "HarryS1"          // Do not use spaces.
 //#define RTTY_FREQUENCY    434.65               // For devices that are frequency-agile
 #define RTTY_BAUD          50               // Comment out if not using RTTY
 #define RTTY_SHIFT        425                // Only used on boards where PWM is used for RTTY.

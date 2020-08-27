@@ -15,6 +15,8 @@ void SetupLEDs(void)
 #ifdef LED_STATUS
   pinMode(LED_STATUS, OUTPUT);
   digitalWrite(LED_STATUS, 0);
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);
 #endif
 
 #ifdef LED_TX
@@ -51,6 +53,7 @@ void CheckLEDs(void)
     else if ((GPS.FixType == 3) && (GPS.Satellites >= 4))
     {
       ControlLEDs(Flash, Flash, 0);
+      digitalWrite(LED_BUILTIN, HIGH); //switch on LED when in GPS below 1000m and in pedestrian mode
     }
     else
     {
@@ -61,4 +64,3 @@ void CheckLEDs(void)
     Flash = 1-Flash;
   }
 }
-

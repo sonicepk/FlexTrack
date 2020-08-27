@@ -170,7 +170,7 @@ if (millis() >= CheckSMSs)
 }//end of routine
 
 void delete_All_SMS() {
-  for(int i = 1; i <= 5; i++) {
+  for(int i = 1; i <= 10; i++) {
     Serial2.print("AT+CMGD=");
     Serial2.println(i);
     Serial.print("deleting SMS ");
@@ -199,7 +199,7 @@ snprintf(Mysms,
 Serial.println (Mysms);
 Serial2.print("AT+CMGF=1\r"); 
 delay(1000);  
-Serial2.print("AT+CMGS=\"+353879255000\"\r");  
+Serial2.print("AT+CMGS=\"+xxxxxxxxxxx\"\r");  
 delay(1000);  
 Serial2.println(Mysms);  
 Serial2.print("\r");  
